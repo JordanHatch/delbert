@@ -1,0 +1,14 @@
+{
+  "name": "delbert",
+  "description": "Dashboard to show pull requests for GOV.UK repos",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.0.x",
+    "ejs": "0.8.x"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
