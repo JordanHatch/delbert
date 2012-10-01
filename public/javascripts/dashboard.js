@@ -1,12 +1,21 @@
 var render_pull_requests = function(data) {
   $('.repositories').html('');
 
-  // data.sort();
-  $.each( data, function(repository, count){
+  $.each( data, function(key, repository){
     var container = $("<section class='repository'></section>");
+    var count = $("<p></p>");
 
-    $("<h1></h1>").text(repository).appendTo(container);
-    $("<p></p>").text(count).appendTo(container);
+    $("<h1></h1>").text(repository.name).appendTo(container);
+
+    count.text(repository.count)
+    if (repository.blocked) {
+      count.append('*');
+    }
+    count.appendTo(container);
+
+    if (repository.count == 0) {
+      container.addClass('without-requests');
+    }
 
     container.appendTo('.repositories');
   });
