@@ -22,7 +22,7 @@ var render_pull_requests = function(data) {
 }
 
 var update_pull_requests = function() {
-  var refresh_delay = 30e3;
+  var refresh_delay = 15e3;
   $.getJSON('/requests.json', function(data){
     render_pull_requests(data);
   });
