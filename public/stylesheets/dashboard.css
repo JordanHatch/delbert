@@ -22,6 +22,10 @@ h1 {
   text-align: center;
 }
 
+.dashboard .repositories {
+  width: 80%;
+  float: right;
+}
 .dashboard .repository {
   display: inline-block;
   background: #d43783;
@@ -57,3 +61,19 @@ header svg {
 header svg path {
   fill: #444;
 }
+
+.dashboard .total {
+  width: 20%;
+  float: left;
+  font-size: 2em;
+  text-align: center;
+  padding: 0;
+  color: #aaa;
+}
+.dashboard .total strong {
+  font-size: 4.2em;
+  display: block;
+  padding-bottom: 0.1em;
+  color: #fff;
+}
+

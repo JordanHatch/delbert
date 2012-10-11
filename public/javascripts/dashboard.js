@@ -1,7 +1,8 @@
 var render_pull_requests = function(data) {
-  $('.repositories').html('');
+  $('.repositories, .total').html('');
 
-  $.each( data, function(key, repository){
+  $('.total').html('<strong>'+ data.total +'</strong>open requests');
+  $.each( data.repositories, function(key, repository){
     var container = $("<section class='repository'></section>");
     var count = $("<p></p>");
 
