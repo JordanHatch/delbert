@@ -32,6 +32,7 @@ h1 {
   vertical-align: top;
   margin: 0.5% 1%;
   width: 48%;
+  height: 4em;
 }
 .dashboard .repository.without-requests {
   background: #333;
@@ -44,6 +45,9 @@ h1 {
 .dashboard .repository h1 {
   width: 65%;
   float: left;
+  overflow: hidden;
+  height: 0.75em;
+  line-height: 1em;
 }
 .dashboard .repository p {
   width: 20%;
@@ -77,3 +81,17 @@ header svg path {
   color: #fff;
 }
 
+.dashboard .error {
+  background: #df3034;
+  margin: 2em auto;
+  font-size: 2em;
+  text-align: center;
+  color: #efcfd1;
+  width: 600px;
+  padding: 1em;
+}
+.dashboard .error h1 {
+  font-size: 2.25em;
+  margin: 0 0 0.25em;
+  color: #fff;
+}

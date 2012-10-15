@@ -1,5 +1,10 @@
 var render_pull_requests = function(data) {
-  $('.repositories, .total').html('');
+  if (data.error && data.error == "rate_limited") {
+    $('.error').html('<h1>Rate limit reached.</h1><p>Normal service will resume shortly.</p>').show();
+    return;
+  }
+
+  $('.repositories, .total, .error').html('');
 
   $('.total').html('<strong>'+ data.total +'</strong>open requests');
   $.each( data.repositories, function(key, repository){
