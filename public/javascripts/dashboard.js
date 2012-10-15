@@ -5,6 +5,7 @@ var render_pull_requests = function(data) {
   }
 
   $('.repositories, .total, .error').html('');
+  $('.error').hide();
 
   $('.total').html('<strong>'+ data.total +'</strong>open requests');
   $.each( data.repositories, function(key, repository){
