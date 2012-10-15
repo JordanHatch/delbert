@@ -13,6 +13,13 @@ app.use(express.static('public'));
 PullRequests.client = https;
 PullRequests.repositories = require('./repositories.json');
 
+if (process.env.gh_client_id) {
+  PullRequests.client_id = process.env.gh_client_id;
+}
+if (process.env.gh_client_secret) {
+  PullRequests.client_secret = process.env.gh_client_secret;
+}
+
 app.get('/', function(req, res){
   res.render('dashboard');
 });
